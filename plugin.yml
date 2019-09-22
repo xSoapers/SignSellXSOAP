@@ -1,0 +1,22 @@
+name: SignSellXSOAP
+main: xsoapsell\economysell\EconomySell
+version: "1.0.0"
+api: [3.0.0, 3.0.0-ALPHA6, 3.0.0-ALPHA7, 3.0.0-ALPHA8, 3.0.0-ALPHA9, 3.0.0-ALPHA10, 3.0.0-ALPHA11]
+author: xSoapers
+website: https://github.com/xSoapers
+depend: [EconomyAPI]
+
+permissions:
+ economysell.*:
+  description: Includes all permission for EconomySell
+  children:
+   economysell.sell.*:
+    description: Includes all permission related to managing sell center
+    children:
+     economysell.sell.sell:
+      description: Allows player to sell items
+      default: true
+     economysell.sell.create:
+      description: Allows player to create sell center
+     economysell.sell.remove:
+      description: Allows player to remove sell center
